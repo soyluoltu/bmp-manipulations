@@ -44,7 +44,7 @@ BMP Manipülatörü GUI, BMP (Bitmap) dosyalarını analiz etmek, düzenlemek ve
 - Cryptography (şifreleme özellikleri için)
 
 
-![Ekran görüntüsü](docs/Bmp_Dosya_bilgileri.png)
+![Ekran görüntüsü](../docs/Bmp_Dosya_bilgileri.png)
 ### Temel Kullanım
 
 1. Uygulamayı başlatın: `python source/Bmp_analiz_gui.py`
