@@ -1,5 +1,3 @@
-
-
 ## Giriş
 
 BMP Manipülatörü GUI, BMP (Bitmap) dosyalarını analiz etmek, düzenlemek ve steganografi işlemleri gerçekleştirmek için geliştirilmiş kullanıcı dostu bir grafik arayüz uygulamasıdır. Bu uygulama, komut satırı araçlarının tüm işlevlerini sezgisel bir arayüzle kullanmanızı sağlar.
@@ -31,18 +29,6 @@ BMP Manipülatörü GUI, BMP (Bitmap) dosyalarını analiz etmek, düzenlemek ve
   - BMP dosyası için kapsamlı analiz raporları oluşturma
   - Renk dağılımı grafiklerini kaydetme
   - Metadata ve dosya özelliklerini raporlara dahil etme
-
-## Kurulum
-
-### Gereksinimler
-
-- Python 3.8 veya üzeri
-- Tkinter (genellikle Python kurulumu ile birlikte gelir)
-- Pillow (Python Imaging Library)
-- Matplotlib
-- Numpy
-- Cryptography (şifreleme özellikleri için)
-
 
 ![Ekran görüntüsü](../docs/Bmp_Dosya_bilgileri.png)
 ### Temel Kullanım
