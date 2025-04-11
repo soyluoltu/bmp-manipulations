@@ -5,7 +5,6 @@ Metadata işlemleri ve steganografi odaklı kapsamlı bir BMP dosya manipülasyo
 ![BMP Manipülatörü Logo](docs/logo.png)
 
 [![Lisans: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Yapı Durumu](https://img.shields.io/github/workflow/status/soyluoltu/bmp-manipulations/CI)](https://github.com/soyluoltu/bmp-manipulations/actions)
 [![Versiyon](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/soyluoltu/bmp-manipulations/releases)
 
 ## Giriş
