@@ -227,7 +227,7 @@ python -m bmp_manipulator stego extract gizli.bmp
 ```
 
 ## BMP Formatı Detayları
-### Daha detaylı bilgi için [Buraya Tıklayın...][https://github.com/soyluoltu/bmp-manipulations/blob/main/bmp-structure.md]x
+### Daha detaylı bilgi için [Buraya Tıklayın...][https://github.com/soyluoltu/bmp-manipulations/blob/main/bmp-structure.md]
 ### Dosya Başlığı (BITMAPFILEHEADER)
 
 | Offset | Boyut | Ad | Açıklama |
