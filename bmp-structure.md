@@ -227,4 +227,10 @@ BMP Manipülatörü, aşağıdaki teknikleri kullanarak steganaliz direncini art
    - Doğal görüntü gürültüsünü taklit eden modeller
    - Renk histogramında değişiklikleri en aza indirme
 
-3. **Yalancı Veri Karıştır
+3. **Yalancı Veri Karıştırma**
+   - Sahte veri enjeksiyonu ile gerçek verinin yerini gizleme
+   - Steganaliz araçlarını yanıltmak için tuzaklar
+
+4. **İmza Kaçınma**
+   - Bilinen steganografi imzalarından kaçınma
+   - Format özelliklerine sıkı uyum sağlama
