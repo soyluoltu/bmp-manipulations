@@ -135,8 +135,8 @@ BMP Manipülatörü, çeşitli steganografi tekniklerini destekler:
 
 ```bash
 # Git deposunu klonlama
-git clone https://github.com/soyluoltu/bmp-manipulator.git
-cd bmp-manipulator
+git clone https://github.com/soyluoltu/bmp-manipulations.git
+cd bmp-manipulations
 
 # Gerekli bağımlılıkları kurma
 pip install -r requirements.txt
