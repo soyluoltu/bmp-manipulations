@@ -130,3 +130,145 @@ BMP Manipülatörü, çeşitli steganografi tekniklerini destekler:
 - **Sahte Positif Enjeksiyonu**
   - Steganaliz araçlarını yanıltmak için sahte veri
   - Gerçek gizli veriyi maskeleme
+
+## Kurulum
+
+```bash
+# Git deposunu klonlama
+git clone https://github.com/soyluoltu/bmp-manipulator.git
+cd bmp-manipulator
+
+# Gerekli bağımlılıkları kurma
+pip install -r requirements.txt
+
+# Test çalıştırma
+python -m unittest discover
+```
+
+## Hızlı Başlangıç
+
+### BMP Başlığını İnceleme
+
+```python
+from bmp_manipulator import BMPFile
+
+# BMP dosyasını yükleme
+bmp = BMPFile("ornek.bmp")
+
+# Başlık bilgilerini görüntüleme
+print(f"Dosya Boyutu: {bmp.file_size} bayt")
+print(f"Piksel Veri Ofset: {bmp.pixel_data_offset}")
+print(f"Görüntü Boyutu: {bmp.width}x{bmp.height}")
+print(f"Renk Derinliği: {bmp.bits_per_pixel} bit")
+```
+
+### Metadata Ekleme
+
+```python
+from bmp_manipulator import BMPFile, Metadata
+
+# BMP dosyasını yükleme
+bmp = BMPFile("ornek.bmp")
+
+# Yeni metadata oluşturma
+meta = Metadata()
+meta.add("Başlık", "Örnek BMP Dosyası")
+meta.add("Yazar", "BMP Manipülatör Kullanıcısı")
+meta.add("Oluşturulma Tarihi", "2023-11-01")
+
+# Metadata'yı BMP'ye ekleme
+bmp.add_metadata(meta)
+
+# Dosyayı kaydetme
+bmp.save("metadata_ekli.bmp")
+```
+
+### Steganografi Örneği
+
+```python
+from bmp_manipulator import BMPFile, LSBSteganography
+
+# BMP dosyasını yükleme
+bmp = BMPFile("taşıyıcı.bmp")
+
+# Steganografi modülünü başlatma
+stego = LSBSteganography(bmp)
+
+# Metin mesaj gizleme
+stego.hide_text("Bu gizli bir mesajdır.", password="güvenli_parola")
+
+# Dosyayı kaydetme
+bmp.save("gizli_mesaj_içeren.bmp")
+
+# Mesajı çıkarma
+extracted = LSBSteganography.extract_text("gizli_mesaj_içeren.bmp", password="güvenli_parola")
+print(f"Çıkarılan Mesaj: {extracted}")
+```
+
+## CLI Kullanımı
+
+BMP Manipülatörü, temel işlemler için kullanımı kolay bir komut satırı arayüzü sağlar:
+
+```bash
+# BMP bilgilerini görüntüleme
+python -m bmp_manipulator info ornek.bmp
+
+# Metadata ekleme
+python -m bmp_manipulator metadata add ornek.bmp --key "Başlık" --value "Örnek Görüntü"
+
+# Metadata çıkarma
+python -m bmp_manipulator metadata extract metadata_ekli.bmp
+
+# Metin gizleme (steganografi)
+python -m bmp_manipulator stego hide taşıyıcı.bmp --text "Gizli mesaj" --output gizli.bmp
+
+# Gizli metni çıkarma
+python -m bmp_manipulator stego extract gizli.bmp
+```
+
+## BMP Formatı Detayları
+
+### Dosya Başlığı (BITMAPFILEHEADER)
+
+| Offset | Boyut | Ad | Açıklama |
+|--------|-------|----------------|-------------|
+| 0x00 | 2 | bfType | "BM" (0x4D42) imzası |
+| 0x02 | 4 | bfSize | Dosyanın toplam boyutu (bayt) |
+| 0x06 | 2 | bfReserved1 | Rezerve edilmiş (genellikle 0) |
+| 0x08 | 2 | bfReserved2 | Rezerve edilmiş (genellikle 0) |
+| 0x0A | 4 | bfOffBits | Piksel verilerine offset |
+
+### DIB Başlığı (BITMAPINFOHEADER)
+
+| Offset | Boyut | Ad | Açıklama |
+|--------|-------|----------------|-------------|
+| 0x0E | 4 | biSize | Başlık boyutu (40 bayt) |
+| 0x12 | 4 | biWidth | Görüntü genişliği (piksel) |
+| 0x16 | 4 | biHeight | Görüntü yüksekliği (piksel) |
+| 0x1A | 2 | biPlanes | Renk düzlemleri (genellikle 1) |
+| 0x1C | 2 | biBitCount | Piksel başına bit sayısı |
+| 0x1E | 4 | biCompression | Sıkıştırma yöntemi |
+| 0x22 | 4 | biSizeImage | Görüntü verisi boyutu |
+| 0x26 | 4 | biXPelsPerMeter | Yatay çözünürlük |
+| 0x2A | 4 | biYPelsPerMeter | Dikey çözünürlük |
+| 0x2E | 4 | biClrUsed | Palet girişi sayısı |
+| 0x32 | 4 | biClrImportant | Önemli renkler |
+
+## Katkıda Bulunma
+
+BMP Manipülatörü projesine katkıda bulunmak isterseniz:
+
+1. Bu depoyu fork edin
+2. Özellik dalınızı oluşturun (`git checkout -b özellik/yeni-özellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik: X ekle'`)
+4. Dalınıza push yapın (`git push origin özellik/yeni-özellik`)
+5. Bir Pull Request oluşturun
+
+## Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+## İletişim
+
+Sorular, öneriler veya geri bildirimler için:
+- GitHub Issues: [github.com/soyluoltu/bmp-manipulator/issues](https://github.com/soyluoltu/bmp-manipulator/issues)
