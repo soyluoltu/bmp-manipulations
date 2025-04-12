@@ -67,13 +67,13 @@ Steganografi işlemleri için [Steganografi] menüsünü kullanabilirsiniz (Geli
 ## Ekran Görüntüleri
 
 ### Ana Ekran
-![Ana Ekran](docs/screenshots/main_screen.png)
+![Ana Ekran](../docs/screenshots/main_screen.png)
 
 ### Renk Analizi
-![Renk Analizi](docs/screenshots/color_analysis.png)
+![Renk Analizi](../docs/screenshots/color_analysis.png)
 
 ### Rapor Örneği
-![Rapor Örneği](docs/screenshots/report_example.png)
+![Rapor Örneği](../docs/screenshots/report_example.png)
 
 ## Planlanan Özellikler
 
@@ -86,7 +86,7 @@ Steganografi işlemleri için [Steganografi] menüsünü kullanabilirsiniz (Geli
 
 ## Komut Satırı Arayüzü ile Entegrasyon
 
-BMP Manipülatörü GUI, aynı proje içindeki komut satırı araçlarıyla tam entegrasyon sunar. Komut satırı arayüzünün tüm özellikleri hakkında bilgi edinmek için [CLI Kullanım Kılavuzu](source/cli-example.md) belgesine bakabilirsiniz.
+BMP Manipülatörü GUI, aynı proje içindeki komut satırı araçlarıyla tam entegrasyon sunar. Komut satırı arayüzünün tüm özellikleri hakkında bilgi edinmek için [CLI Kullanım Kılavuzu](../source/cli-example.md) belgesine bakabilirsiniz.
 
 ## Katkıda Bulunma
 
@@ -102,7 +102,7 @@ BMP Manipülatörü GUI projesine katkıda bulunmak isterseniz:
 
 ### BMP Dosya Yapısı
 
-BMP Manipülatörü GUI, BMP dosya formatının yapısını analiz eder ve görselleştirir. BMP formatı hakkında daha fazla bilgi için [BMP Yapısı Dokümantasyonu](bmp-structure.md) belgesine bakabilirsiniz.
+BMP Manipülatörü GUI, BMP dosya formatının yapısını analiz eder ve görselleştirir. BMP formatı hakkında daha fazla bilgi için [BMP Yapısı Dokümantasyonu](../bmp-structure.md) belgesine bakabilirsiniz.
 
 ### Renk Analizi Algoritması
 
@@ -119,5 +119,5 @@ Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 ## İletişim
 
 Sorular, öneriler veya geri bildirimler için:
-- GitHub Issues: [github.com/soyluoltu/bmp-manipulator/issues](https://github.com/soyluoltu/bmp-manipulator/issues)
-- E-posta: contact@bmpmanipulator.example.com (Demo amaçlı)
+- GitHub Issues: [github.com/soyluoltu/bmp-manipulations/issues](https://github.com/soyluoltu/bmp-manipulations/issues)
+
