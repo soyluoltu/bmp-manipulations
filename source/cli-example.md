@@ -6,8 +6,8 @@ Bu belge, BMP Manipülatörü uygulamasının nasıl kullanılacağını göster
 
 ```bash
 # Git deposunu klonla
-git clone https://github.com/soyluoltu/bmp-manipulator.git
-cd bmp-manipulator
+git clone https://github.com/soyluoltu/bmp-manipulations.git
+cd bmp-manipulations
 
 # Bağımlılıkları kur
 pip install -r requirements.txt
